@@ -7,7 +7,13 @@ require "vf4_training.players_info"
 require "vf4_training.utils.utils"
 
 function Overlay()
-  if GAME_ADDRESSES ~= nil then
+  if HIDE_UI then
+      if (INPUT.getButtons(1) == 0xFFFFEFFF) then
+        HIDE_UI = false
+      end
+  end
+
+  if GAME_ADDRESSES ~= nil and HIDE_UI ~= true then
     PlayersInfo.initialize_values()
     FrameDataOverlay.start()
     TrainingOverlay.start()

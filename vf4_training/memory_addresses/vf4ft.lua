@@ -29,6 +29,8 @@ FT_MEMORY_TABLE = {
     ['p1_player_controller'] = 0x0C37BA48,
     ['p1_hit_check'] = 0x0C37BBA0,                              -- byte
     ['p1_stance'] = 0x0C37BD48,                                 -- byte
+    ['p1_change_move_a'] = 0x0C37BBF0,                          -- byte
+    ['p1_change_move_b'] = 0x0C37BBF1,                          -- byte
     
     ['p2_health'] = 0x0C37C2AC,                                 -- 2 bytes
     ['p2_frame_advantage'] = 0x0C37BB9A,                        -- 2 bytes
@@ -43,7 +45,9 @@ FT_MEMORY_TABLE = {
     ['p2_block_counter'] = 0x0C43170C,                          -- 2 bytes
     ['p2_player_controller'] = 0x0C37C2B4,
     ['p2_hit_check'] = 0x0C37C40C,                              -- byte
-    ['p2_stance'] = 0x0C37C5B4
+    ['p2_stance'] = 0x0C37C5B4,
+    ['p2_change_move_a'] = 0x0C37C45C,                          -- byte
+    ['p2_change_move_b'] = 0x0C37C45D,                          -- byte
 }
 
 FT_MEMORY_TABLE.is_evo = false

@@ -77,3 +77,21 @@ end
 function Training.set_p2_as_human()
     MEMORY.write8(GAME_ADDRESSES.p2_player_controller, 37) 
 end
+
+function Training.toggle_change_move_a(player)
+    player_change_move_table_string = 'p' .. player ..'_change_move_a'
+    if MEMORY.read8(GAME_ADDRESSES[player_change_move_table_string]) == 0 then
+        flycast.memory.write8(GAME_ADDRESSES[player_change_move_table_string], -1)
+    else
+         flycast.memory.write8(GAME_ADDRESSES[player_change_move_table_string], 0)
+    end
+end
+
+function Training.toggle_change_move_b(player)
+    player_change_move_table_string = 'p' .. player ..'_change_move_b'
+    if MEMORY.read8(GAME_ADDRESSES[player_change_move_table_string]) == 0 then
+        flycast.memory.write8(GAME_ADDRESSES[player_change_move_table_string], 1)
+    else
+         flycast.memory.write8(GAME_ADDRESSES[player_change_move_table_string], 0)
+    end
+end
